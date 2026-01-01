@@ -22,40 +22,46 @@ setTimeout(() => {
     setMessages(prev => [
       ...prev,
       {
-        text: " Here are popular AI Image tools:",
-        sender: "bot"
+        sender: "bot",
+        type: "text",
+        text: "Here are some popular AI image tools:"
       },
       {
-        text: "• DALL·E\n• Midjourney\n• Stable Diffusion",
-        sender: "bot"
+        sender: "bot",
+        type: "tools",
+        tools: [
+          {
+            name: "DALL·E",
+            desc: "Text to image generation",
+            url: "https://openai.com/dall-e"
+          },
+          {
+            name: "Midjourney",
+            desc: "High quality AI artwork",
+            url: "https://www.midjourney.com"
+          },
+          {
+            name: "Stable Diffusion",
+            desc: "Open-source image generation",
+            url: "https://stability.ai"
+          }
+        ]
       }
     ]);
-  } 
-  else if (userText.includes("coding")) {
+  } else {
     setMessages(prev => [
       ...prev,
       {
-        text: " Coding AI tools you can try:",
-        sender: "bot"
-      },
-      {
-        text: "• ChatGPT\n• GitHub Copilot\n• Codeium",
-        sender: "bot"
-      }
-    ]);
-  } 
-  else {
-    setMessages(prev => [
-      ...prev,
-      {
-        text: " I can help you navigate AI tools. Try asking about image, coding, or design.",
-        sender: "bot"
+        sender: "bot",
+        type: "text",
+        text: "Ask me about image, coding, or design tools."
       }
     ]);
   }
 
   setTyping(false);
 }, 1200);
+
 
   };
 
