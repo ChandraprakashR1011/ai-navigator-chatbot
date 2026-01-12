@@ -15,7 +15,7 @@ function ChatApp() {
         <div className="chat-header">
            AI Toolbox
           <button onClick={() => setDark(!dark)} className="toggle">
-            {dark ? "🌞" : "🌛"}
+            {dark ? "🔅" : "🌙"}
           </button>
         </div>
 

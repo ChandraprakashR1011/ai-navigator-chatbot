@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import avatarImg from "../assets/avatar.png";
+import botAvatar from "../assets/robot.png";
+import userAvatar from "../assets/user.png";
 
 function ChatMessages({ messages }) {
   const bottomRef = useRef(null);
@@ -16,12 +17,15 @@ function ChatMessages({ messages }) {
           key={index}
           className={`message ${msg.sender} fade-in`}
         >
-          {/* BOT AVATAR (only for bot messages) */}
+
+          {/* BOT AVATAR (LEFT) */}
           {msg.sender === "bot" && (
-          <span className="avatar"><img className="avatarpng" src={avatarImg} alt="Bot Avatar"/></span>
+            <span className="avatar">
+              <img className="avatarpng" src={botAvatar} alt="Bot Avatar" />
+            </span>
           )}
 
-          {/* TEXT MESSAGE */}
+          {/* MESSAGE TEXT */}
           {msg.text && (
             <div className="text">
               {msg.text}
@@ -45,6 +49,14 @@ function ChatMessages({ messages }) {
               ))}
             </div>
           )}
+
+          {/* USER AVATAR (RIGHT) */}
+          {msg.sender === "user" && (
+            <span className="avatar">
+              <img className="avatarpng" src={userAvatar} alt="User Avatar" />
+            </span>
+          )}
+
         </div>
       ))}
 

@@ -81,7 +81,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border:2px solid #1cb9fd;
 }
 .light .toggle{
-  background-color:  #D5F0FC;
+  background-color:  #1cb9fd;
 }
 
 .dark .chat-card{
@@ -123,7 +123,7 @@ color: #ffffff;
   color: #2f4850;
 }
 .dark .toggle{
-  background-color:  #63767C;
+  background-color:   #1F2F34;
 }
 
 /* ===== CHAT CARD (APPLE GLASS) ===== */
@@ -160,15 +160,14 @@ color: #ffffff;
 /* Theme toggle */
 .toggle {
   position: absolute;
-  right: 14px;
-  top: 15px;
+  right: 18px;
+  top: 18px;
   background: none;
   border: none;
   color:  #f1f5f9c3;
   font-size: 25px;
   cursor: pointer;
-  border-radius: 50%;
-  border:0.1px  #f1f5f9c3  solid;
+  border-radius: 35%;
   background-color: #f1f5f9c3;
 }
 
@@ -208,17 +207,32 @@ color: #ffffff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.495);
   backdrop-filter: blur(8px);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-right: 8px;
-  
 }
+/* Bot avatar → space on the right */
+.message.bot .avatar {
+  margin-right: 8px;
+}
+
+/* User avatar → space on the left */
+.message.user .avatar {
+  margin-left: 8px;
+}
+/* Limit user message bubble width */
+.message.user .text {
+  max-width: 65%;
+}
+.message.user .avatar {
+  margin-left: 10px; /* space between text & avatar */
+}
+.message.bot .text {
+  max-width: 75%;
+}
+
 
 .avatar img {
   width: 100%;
@@ -226,6 +240,7 @@ color: #ffffff;
   border-radius: 50%;
   object-fit: cover;
 }
+
 
 /* ===== TEXT BUBBLE ===== */
 .text {
