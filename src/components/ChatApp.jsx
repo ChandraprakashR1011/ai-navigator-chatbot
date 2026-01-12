@@ -13,9 +13,9 @@ function ChatApp() {
     <div className={dark ? "app-bg dark" : "app-bg light"}>
       <div className="chat-card">
         <div className="chat-header">
-          🤖 AI Navigator
+           AI Tool Finder
           <button onClick={() => setDark(!dark)} className="toggle">
-            {dark ? "☀️" : "🌙"}
+            {dark ? "🌞" : "🌛"}
           </button>
         </div>
 

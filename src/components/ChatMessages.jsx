@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import avatarImg from "../assets/avatar.png";
 
 function ChatMessages({ messages }) {
   const bottomRef = useRef(null);
@@ -17,7 +18,7 @@ function ChatMessages({ messages }) {
         >
           {/* BOT AVATAR (only for bot messages) */}
           {msg.sender === "bot" && (
-            <span className="avatar">🤖</span>
+          <span className="avatar"><img className="avatarpng" src={avatarImg} alt="Bot Avatar"/></span>
           )}
 
           {/* TEXT MESSAGE */}
