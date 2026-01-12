@@ -3,9 +3,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-    "Segoe UI", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 
 /* ===== APP BACKGROUND ===== */
 .app-bg {
@@ -17,46 +17,50 @@
 
 /* Dark & Light themes */
 .dark {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+background:#63767C; 
 }
 
 .light {
-  background: linear-gradient(135deg, #1c4278, #508cfd, #4994fd, #22549a);
+  background: #1cb9fd2d;
 }
 .light .chat-card {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
-
   border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 25px 60px rgba(90, 153, 242, 0.35);
-}
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
 .light .chat-header {
-  background: rgba(255, 255, 255, 0.125);
+  background-color: #1cb9fd;
   backdrop-filter: blur(18px);
-
-  color: #0f172a;
+  color: #000000e4;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 .light .chat-messages {
-  background: rgba(255, 255, 255, 0);
+color:#000000;
+background-color: rgb(255, 255, 255);
   backdrop-filter: blur(16px);
 }
 .light .message.bot .text {
-  background: rgba(255, 255, 255, 0.800);
-  color: #0f172a;
+  background: #1cb9fd2d;
+  color: #000000;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
+    
+
 }
 .light .message.user .text {
-  background: rgba(255, 255, 255, 0.800);
+  background: #1cb9fd77;
   color: #0d0000;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
 }
 .light .chat-input {
-  background: rgba(255, 255, 255, 0.212);
-  backdrop-filter: blur(18px);
+  background: #fefefe;
+
+backdrop-filter: blur(18px);
 }
 
 .light .chat-input input {
-  background: rgba(255, 255, 255, 0.589);
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #1cb9fd2d;
   color: #0f172a;
 }
 .light .avatar {
@@ -64,21 +68,71 @@
   box-shadow: 0 6px 14px rgba(79, 149, 253, 0);
 }
 .light .chat-input button:hover {
- background: linear-gradient(135deg, #1c4278, #508cfd, #4994fd, #22549a);
+    background: #1cb9fd;
 color:#f1f5f9;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.light .chat-input button{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #1cb9fd2d;
+}
+.light .tool-card{
+  
+  border:2px solid #1cb9fd;
+}
+.light .toggle{
+  background-color:  #D5F0FC;
 }
 
+.dark .chat-card{
+  background: #2f4850;
+}
+.dark .message.user .text {
+  background: #1F2F34;
+  color: #ffffff;  
+}
+.dark .message.bot .text{
+  background-color: #718d97;
+  color: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
 
+}
+.dark .chat-input {
+  background:#2f4850;
+  border-color: #2f4850;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
+
+
+backdrop-filter: blur(18px);
+}
+.dark .chat-input button:hover {
+background: #1F2F34;
+color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
+}
+.dark .typing{
+    color: #ffffff;
+}
+.dark .tool-card{
+  border: 2px solid  #1F2F34;
+  background-color: #ffffff;
+
+  color: #1F2F34;
+}
+.dark .tool-desc{
+  color: #2f4850;
+}
+.dark .toggle{
+  background-color:  #63767C;
+}
 
 /* ===== CHAT CARD (APPLE GLASS) ===== */
 .chat-card {
   width: 500px;
   height: 680px;
   border-radius: 20px;
-
-background: rgba(255, 255, 255, 0.145);  backdrop-filter: blur(18px);
+ backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   border: 1px solid rgba(255, 255, 255, 0.059);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 
@@ -97,7 +151,7 @@ background: rgba(255, 255, 255, 0.145);  backdrop-filter: blur(18px);
   padding-left: 30px;
 
   font-weight: 600;
-  font-size: large;
+  font-size:22px;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
@@ -123,8 +177,7 @@ background: rgba(255, 255, 255, 0.145);  backdrop-filter: blur(18px);
   flex: 1;
   padding: 14px;
   overflow-y: auto;
-
-  background: rgba(255, 255, 255, 0.25);
+ background: #2f4850;
   backdrop-filter: blur(10px);
 
   scroll-behavior: smooth;
@@ -191,7 +244,7 @@ background: rgba(255, 255, 255, 0.145);  backdrop-filter: blur(18px);
 
 /* Bot bubble */
 .message.bot .text {
-  background: rgba(255, 255, 255, 0.8);
+  background-color: #ffffff;
   color: #111827;
   border-bottom-left-radius: 4px;
 }
@@ -207,7 +260,7 @@ background: rgba(255, 255, 255, 0.145);  backdrop-filter: blur(18px);
 .typing {
   padding: 6px 14px;
   font-size: 13px;
-  color: #f1f5f9;
+  color: #1cb9fd;
 }
 
 /* ===== TOOL CARDS ===== */
@@ -257,17 +310,15 @@ background: rgba(255, 255, 255, 0.145);  backdrop-filter: blur(18px);
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(14px);
 
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid #ffffff;
 }
 
 .chat-input input {
   flex: 1;
   padding: 10px 14px;
   border-radius: 20px;
-
-  border: none;
+  border:1px solid #ffffff;
   outline: none;
-
   font-size: 14px;
   background: rgba(255, 255, 255, 0.9);
 }
